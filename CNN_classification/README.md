@@ -1,9 +1,13 @@
 
 
 # Convolutional Neural Network Model for the Classification Task
+## Table of Contents:
+* [Project Requirements](#i-project-requirements)
+* [Project Designs and Developments](#ii-project-designs-and-developments)
+* [Discussions](#iii-discussions)
 ## I. Project Requirements:
 In this project you will need to develop a CNN model for the classification task on fashion
-MNIST dataset that has been corrupted with noise. The dataset is provided (“project3trainset.pkl” for training and project3trainlabel.pkl” for the labels). 
+MNIST dataset that has been corrupted with noise. The dataset is provided (“project-trainset.pkl” for training and project-trainlabel.pkl” for the labels). 
 You will need to
 develop the CNN as follows:
 1. Develop a multilayered CNN classifier for classification of the fashion MNIST dataset.
