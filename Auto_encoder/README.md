@@ -65,7 +65,7 @@ From the generated plot, it can be said that the model was not overfitting. The 
 
 ![image](https://user-images.githubusercontent.com/72519491/118708636-f4f6a580-b7e9-11eb-9304-75cd23f2c739.png)
  
-My estimation was that the model would likely to generate 78% of the images that would be able to be detected by human’s eyes.
+My estimation was that the model would likely to generate 80% of the images that would be able to be detected by human’s eyes.
 
 <h2> III. Discussions: </h2>
 
