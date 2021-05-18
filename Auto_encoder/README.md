@@ -1,9 +1,9 @@
 <h1>Denoising Autoencoder to process noisy images</h1>
-## Table of Contents:
+##Table of Contents:
 
 * [Project requirements](#i-project-requirements)
 * [Project designs and developments](#ii-project-designs-and-developments)
-* [Discussions](#iii-discussions)
+* [Discussions](#-iii-discussions-)
 
 <h2>I. Project requirements:</h2>
 
