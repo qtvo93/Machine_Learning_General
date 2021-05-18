@@ -59,6 +59,7 @@ The main methodologies were used to reduce the total number of parameters were u
 In addition, each layer would also be normalized using BatchNormalization and then applied Dropout in order to prevent overfitting.
 After the GridSearch was conducted and recorded, the code was then updated to create a model with the best tuned parameters. The model was then trained and saved to Model3.h5 using Keras.
 In order to generate the Model3.h5 file, the checkpoint and early stopping methodologies were used in order to have an early stop when necessary after no progress on validation set for 5 consecutive number of epochs and to save the best available model.
+
 After the model was loaded back from the Model.h5 file, a quick prediction was performed on the first 10 elements of the X_test to see how the design performed. In comparison to the first 10 elements of the label y_test. The designed model got 10/10 correct answers, indicating that its performance was outstanding. It raised the question that whether the model was overfitting.
 
 ![image](https://user-images.githubusercontent.com/72519491/118713393-deebe380-b7ef-11eb-84d1-c75a835e816d.png)
