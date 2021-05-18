@@ -1,5 +1,9 @@
-<h1>Autoencoder Project</h1>
-
+<h1>Denoising Autoencoder to process noisy images</h1>
+## Table of Contents:
+* [Project requirements](I. Project requirements:)
+* Project designs and developments
+* Discussions
+* 
 <h2>I. Project requirements:</h2>
 
 Develop a multilayered autoencoder for removing noise from the dataset. As it is
