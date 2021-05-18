@@ -1,6 +1,6 @@
-Autoencoder Project
+<h1>Autoencoder Project</h1>
 
-I. Project requirements:
+<h2>I. Project requirements:</h2>
 
 Develop a multilayered autoencoder for removing noise from the dataset. As it is
 shown, the noise is from the fashion MNIST. The goal of this project is to design a
@@ -8,7 +8,7 @@ network such that it removes the noise from the image to the extent that a perso
 correctly determine the digits. The choice of the architecture of the autoencoder is
 entirely up to you, however no more than 3,600 training parameters shall be used.
 
-II. Project designs and developments:
+<h2>II. Project designs and developments:</h2>
 
 After linking all the basic libraries, the project implementations were started by loading dataset into the working environment using pickle load. Some quick inspections were performed as normally required to ensure that the provided data set was clean, so no cleaning data processing was needed.
 
