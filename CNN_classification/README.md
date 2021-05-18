@@ -34,19 +34,17 @@ The implementations were played around with changes vary from optimizer, loss me
 The grid search parameters were generated as following:
 
 param_grid = {
-
-    'batch_size': (16, 32, 64),
-    
-    'epochs': (9,11,13,15,17,19,20,21,23,24,25,26,27,29,30,31,32,40,50),
-    
-    'dropout_rate1': (0.0, 0.10, 0.15, 0.20, 0.25, 0.35, 0.40),
-    
+    'batch_size': (16, 32, 64),    
+    'epochs': (9,11,13,15,17,19,20,21,23,24,25,26,27,29,30,31,32,40,50),    
+    'dropout_rate1': (0.0, 0.10, 0.15, 0.20, 0.25, 0.35, 0.40),    
     'dropout_rate2': (0.0, 0.10, 0.15, 0.20, 0.25, 0.35, 0.40), }
 
 
 The Grid Search focused on searching the best dropout rate parameters for the create_mlp_model function and the most efficient batch size and epochs.
 A model was also created to perform the grid search:
+
 model = tf.keras.wrappers.scikit_learn.KerasClassifier(build_fn=create_mlp_model, verbose=1)
+
 The generated model was satisfied the requirements that total number of parameters are less than 50,000. The optimized model has the best fine-tuned parameters in the parameter lists with batch size = 64, epochs = 28, dropout rate 1 = 0.20, dropout rate 2 = 0.35
 
 ![image](https://user-images.githubusercontent.com/72519491/118713319-c7acf600-b7ef-11eb-9b49-edc1a41973a3.png)
