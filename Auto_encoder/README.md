@@ -31,7 +31,7 @@ The data set was ready to be trained now. Next step was to design a model to fit
 After the model was created, a list of parameters was generated to perform the Grid Search when compiling the model. Because the number of epochs was important to prevent the model from overfitting and underfitting; therefore, the main focus of the Grid Search was the number of epochs, hence the list of epochs has the most elements.
  ![image](https://user-images.githubusercontent.com/72519491/118708505-ce386f00-b7e9-11eb-9451-0e9c642577c0.png)
 
-During the Grid Search stage, there was an error raising that y shape was invalid. Despite further research, the issue was not solved. My assertion was that in this project the shape of y was different from the last project where y was one hot encoded to array of 0 and 1. This issue raised a new challenge on how to Grid Search the parameters.
+During the Grid Search stage, there was an error raising that y shape was invalid. Despite further research, the issue was not solved. My assertion was that in this project the shape of y was different from the convolutional neural networks where y was one hot encoded to array of 0 and 1. This issue raised a new challenge on how to Grid Search the parameters.
 After reviewing the purposes of Grid Search, an alternative methodology was used. The model would take each of the parameters in the list and then compiled accordingly using a nested for loop.
  
 The model then was able to be trained according to each combination of parameters. After the Grid Search was finished, each combination was carefully reviewed and picked manually to ensure that the picked parameters would be the best combination among the available grid parameters.
