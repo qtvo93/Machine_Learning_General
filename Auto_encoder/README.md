@@ -62,7 +62,8 @@ From the generated plot, it can be said that the model was not overfitting. The 
  
 My estimation was that the model would likely to generate 78% of the images that would be able to be detected by human’s eyes.
 
-III. Discussions:
+<h3> III. Discussions: </h3>
+
 The model was able to denoise the images; however, the results were not as clean as the y set, leaving room for improvements.
 Looking back into the design process, the model was hard coded to be a convolutional autoencoder. There were other models that could be picked; hence, if more research were conducted among the available models, it would likely that there was a model that better than the others. For the Grid search stage, the search was just searching for a limited number of parameters from a desired list, there were so many available parameters that were neglected. If it were done more precise, the outcome could be more promising. Given that the parameters were bounded by 3,600; if the total number of parameters were not limited, the model can be trained with a higher cap because the difference in the number of combinations of layers and the size of filters. The limitations in resource required students to have a proper design and to understand the implementations thoroughly, that would be useful when given a better computing resource in further research.
 
