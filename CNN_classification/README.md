@@ -32,11 +32,17 @@ After all the data processing had been done, the data set was ready to be traine
 A function called create_mlp_model was used to generate the model for the Keras Classifier to use later. It was required that the parameter that passed into the Keras Classifier was a function to build model, not a pre-built model.
 The implementations were played around with changes vary from optimizer, loss method to number of layers, filter size, kernel size, etc in order to get some senses of how the reduction in parameters would affect the overall implementation. Because the optimizer was picked as ‘adam’, loss method was picked as ‘categorical_crossentropy’ and number of layers was designed based on the overall outcomes of initial running trials, the parameters of the create_mlp_model only contained dropout rate 1 and dropout rate 2 that would be used in later GridSearch. 
 The grid search parameters were generated as following:
+
 param_grid = {
+
     'batch_size': (16, 32, 64),
+    
     'epochs': (9,11,13,15,17,19,20,21,23,24,25,26,27,29,30,31,32,40,50),
+    
     'dropout_rate1': (0.0, 0.10, 0.15, 0.20, 0.25, 0.35, 0.40),
+    
     'dropout_rate2': (0.0, 0.10, 0.15, 0.20, 0.25, 0.35, 0.40), }
+
 
 The Grid Search focused on searching the best dropout rate parameters for the create_mlp_model function and the most efficient batch size and epochs.
 A model was also created to perform the grid search:
