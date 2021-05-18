@@ -55,7 +55,7 @@ Taking a deeper look into each layer, the non-trainable parameters number was fr
 ![image](https://user-images.githubusercontent.com/72519491/118713352-d09dc780-b7ef-11eb-8589-a1ddbb2eeee5.png)
 
 
-The main methodologies were used to reduce the total number of parameters were using striding kernel with stride size = 1 and MaxPooling2D with the pool size = 2 as default.
+The main methodologies were used to reduce the total number of parameters were using striding kernel and MaxPooling2D with the pool size = 2 as default.
 In addition, each layer would also be normalized using BatchNormalization and then applied Dropout in order to prevent overfitting.
 After the GridSearch was conducted and recorded, the code was then updated to create a model with the best tuned parameters. The model was then trained and saved to Model3.h5 using Keras.
 In order to generate the Model3.h5 file, the checkpoint and early stopping methodologies were used in order to have an early stop when necessary after no progress on validation set for 5 consecutive number of epochs and to save the best available model.
