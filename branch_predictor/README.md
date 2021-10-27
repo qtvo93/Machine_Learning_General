@@ -2,16 +2,16 @@ Project Branch_Predictor
 
 Part 1: TWO_BIT_LOCAL Predictor
 
-LocalPredictorSize 	LocalCounterBits	Correct	Incorrect	% Correctness
-
-2048	1	8217	1783	82.169998000
-2048	2	8467	1533	84.669998000
-4096	2	8468	1532	84.680000000
-8192	2	8476	1524	84.759995000
-16384	2	8474	1526	84.739998000
-32768	2	8473	1527	84.729996000
-65536	2	8473	1527	84.729996000
-
++-------------------+------------------+---------+----------+---------------+
+|LocalPredictorSize |	LocalCounterBits | Correct |Incorrect	| % Correctness |
+|   2048	          |      1	         |  8217	 |   1783	  |  82.169998000 |
+|   2048	          |      2	         |  8467	 |   1533	  |  84.669998000 |
+|   4096	          |      2	         |  8468	 |   1532	  |  84.680000000 |
+|   8192	          |      2	         |  8476	 |   1524	  |  84.759995000 |
+|   16384	          |      2	         |  8474	 |   1526	  |  84.739998000 |
+|   32768	          |      2	         |  8473	 |   1527	  |  84.729996000 |
+|   65536	          |      2	         |  8473	 |   1527	  |  84.729996000 |
++-------------------+------------------+---------+----------+---------------+
 
 The best combination that give us the best performance is LocalPredictorSize : 8192 and LocalCounterBits: 2 with 84.759995% correctness.
 
