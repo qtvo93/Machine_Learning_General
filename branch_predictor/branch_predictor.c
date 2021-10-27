@@ -33,11 +33,10 @@ LocalPredictorSize : 8192 and LocalCounterBits: 2 with 84.759995% correctness.
 | 16384                | 32768 	            |	32768		  | 8046     | 1954     | 80.459999000  | 
 +----------------------+--------------------+---------------------+----------+----------+---------------+
 
-
 The best combination that give us the best performance is:
 LocalHistoryTableSize : 4096 and GlobalPredictorSize = ChoicePredictorSize : 8192 with 80.720001% correctness.
 
-Part 3: GSHARE Predictor:
+*Part 3: GSHARE Predictor:
 
 +----------------------+--------------------+---------------------+----------+----------+---------------+ 
 |LocalHistoryTableSize |GlobalPredictorSize | ChoicePredictorSize | Correct  |Incorrect | % Correctness | 
