@@ -26,7 +26,6 @@ with open('mnist_y_train.pkl', 'rb') as f:
 y = df 
 
 #%%
-
 from sklearn.model_selection import train_test_split
 from sklearn.pipeline import Pipeline
 # Python ≥3.5 is required
@@ -56,7 +55,6 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.svm import SVC
 
-
 scaler = StandardScaler()
 X_train = scaler.fit_transform(X_train)
 X_test = scaler.transform(X_test)
@@ -77,14 +75,14 @@ params = {
         'knn__n_neighbors': [1,11,13,15,17,57,59,209,211,213],
         'knn__leaf_size': [40,50],
         'knn__p': [6,7]}
+        
 neigh_clf = GridSearchCV(estimator=pipe,           
                       param_grid=params, 
                       cv=5) 
 neigh_clf.fit(X_train, y_train)
-print(neigh_clf.best_params_)
+#print(neigh_clf.best_params_)
 
 #%% RandomForest
-
 pipe = Pipeline([
         ('sc', StandardScaler()),     
         ('rnd', RandomForestClassifier(random_state=42)) 
@@ -99,10 +97,9 @@ param_grid = {
     'rnd_max_leaf_nodes': [100,200,300,400]}
 rnd_clf = GridSearchCV(estimator=pipe, param_grid=param_grid, cv= 5)
 rnd_clf.fit(X_train, y_train)
-print(rnd_clf.best_params_)
+#print(rnd_clf.best_params_)
 
 #%% SVC
-
 pipe = Pipeline([
         ('sc', StandardScaler()),     
         ('svc', SVC(gamma="scale",random_state=42)) ])
@@ -111,11 +108,9 @@ param_grid={'svc__C': [1, 10], 'svc__kernel': ('linear', 'rbf')}
 
 svc_clf = GridSearchCV(estimator=pipe,param_grid=param_grid)
 svc_clf.fit(X_train, y_train)
-print(svc_clf.best_params_)
-
+#print(svc_clf.best_params_)
 
 #%% Final Classifiers with tuned parameters and the essemble model
-
 neigh_clf = KNeighborsClassifier(n_neighbors = 13, leaf_size = 35, p = 2 ,algorithm='brute')
 rnd_clf = RandomForestClassifier(bootstrap=True, criterion='gini', max_features=6, 
                                  min_samples_leaf =1, min_samples_split=2,n_estimators=100)
@@ -130,7 +125,7 @@ for clf in (rnd_clf, neigh_clf, svc_clf, voting_clf):
     y_pred = clf.predict(X_test)
     print(clf.__class__.__name__, accuracy_score(y_test, y_pred))
 
-
+#%% Confustion matrix and pickle models
 from sklearn.metrics import confusion_matrix
 confusion_matrix(y_test, y_pred)
 
