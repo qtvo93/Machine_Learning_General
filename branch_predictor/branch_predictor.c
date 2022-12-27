@@ -3,7 +3,7 @@
 * Date: 09/30/2020
 
 *Project Branch_Predictor
-*Supervised Training & Perceptron Algorithm
+
 *Part 1: TWO_BIT_LOCAL Predictor
 
 +-------------------+------------------+---------+----------+---------------+ 
